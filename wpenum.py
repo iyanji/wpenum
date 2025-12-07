@@ -5,28 +5,12 @@ import requests
 from urllib.parse import urljoin
 
 # ============================
-#  SIMPLE COLOR FUNCTION
-# ============================
-BLUE = "\033[94m"
-WHITE = "\033[97m"
-RESET = "\033[0m"
-
-# ============================
-#  BANNER
+#  HEADER MINIMALIS
 # ============================
 def banner():
-    print(BLUE + """
-██╗    ██╗██████╗ ███████╗███╗   ██╗██╗   ██╗███╗   ███╗
-██║    ██║██╔══██╗██╔════╝████╗  ██║██║   ██║████╗ ████║
-██║ █╗ ██║██████╔╝█████╗  ██╔██╗ ██║██║   ██║██╔████╔██║
-██║███╗██║██╔══██╗██╔══╝  ██║╚██╗██║██║   ██║██║╚██╔╝██║
-╚███╔███╔╝██║  ██║███████╗██║ ╚████║╚██████╔╝██║ ╚═╝ ██║
- ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝
-""" + RESET)
-
-    print(WHITE + "         WordPress Username Enumerator" + RESET)
-    print(BLUE + "                 Author: " + WHITE + "iyanji\n" + RESET)
-
+    print("\n[ WPENUM ] WordPress Username Enumerator")
+    print("Author : iyanji")
+    print("-----------------------------------------\n")
 
 # ============================
 #  ENUM FUNCTIONS
@@ -91,7 +75,7 @@ def check_rss(base_url, delay):
 # ============================
 def main():
     parser = argparse.ArgumentParser(
-        description="WordPress Username Enumerator by iyanji"
+        description="WPENUM – WordPress Username Enumerator by iyanji"
     )
 
     parser.add_argument(
