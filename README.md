@@ -1,4 +1,5 @@
 # wpenum.py
-this is a tool to search Authors in wordpress
-
 Enter your target and this tool will scan the Author on the target
+
+# instruction
+If it is installed, run python3 wpenum.py and press ENTER, then enter your target URL.
