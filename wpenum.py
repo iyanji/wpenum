@@ -5,12 +5,19 @@ import requests
 from urllib.parse import urljoin
 
 # ============================
-#  HEADER MINIMALIS
+#  COLORS
+# ============================
+BLUE = "\033[94m"
+WHITE = "\033[97m"
+RESET = "\033[0m"
+
+# ============================
+#  HEADER (BANNER MINIMALIS)
 # ============================
 def banner():
-    print("\n[ WPENUM ] WordPress Username Enumerator")
-    print("Author : iyanji")
-    print("-----------------------------------------\n")
+    print(BLUE + "\n[ WPENUM ]" + RESET + WHITE + " WordPress Username Enumerator" + RESET)
+    print(BLUE + "Author :" + RESET + WHITE + " iyanji" + RESET)
+    print(BLUE + "-----------------------------------------\n" + RESET)
 
 # ============================
 #  ENUM FUNCTIONS
@@ -29,7 +36,7 @@ def check_author_id(base_url, max_id, delay):
                 print(f"[+] Found username from author ID {i}: {user}")
         except:
             pass
-        
+
         time.sleep(delay)
     return found
 
@@ -48,7 +55,7 @@ def check_rest_api(base_url, delay):
             return found
     except:
         pass
-    
+
     print("[-] REST API blocked/disabled")
     return []
 
@@ -79,15 +86,15 @@ def main():
     )
 
     parser.add_argument(
-        "--url", 
-        required=True, 
+        "--url",
+        required=True,
         help="Target WordPress site (contoh: https://example.com)"
     )
-    
+
     parser.add_argument(
-        "--max-id", 
-        type=int, 
-        default=10, 
+        "--max-id",
+        type=int,
+        default=10,
         help="Author ID range (default: 10)"
     )
 
